@@ -8,10 +8,19 @@ block content
   #home-header
     #home-header-text
       #home-logo: include /../includes/icons/logo.svg
-  #sections
-    .section.row
-      .section-content
-        h1 Under Construction
-        p This website is currently under construction.
-      #twitter-feed
-        <a class="twitter-timeline" data-width="450" data-height="400" data-dnt="true" data-theme="light" href="https://twitter.com/Sunderland_RC?ref_src=twsrc%5Etfw">Loading tweets...</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    #info
+      h1 Under Construction
+      p This website is currently under construction.
+      h1 Contact
+      //- .row
+      //-   .icon: include /../includes/icons/at.svg
+      //-   | club@example.com
+      .row
+        .icon: include /../includes/icons/phone.svg
+        | 07546 363662
+      .row
+        .icon: include /../includes/icons/map-marker.svg
+        span
+          div Sunderland Rowing Club
+          div Riverside Park, South Hylton
+          div SR4 0RT

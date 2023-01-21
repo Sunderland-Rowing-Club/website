@@ -8,7 +8,8 @@
   text-decoration: none
 
 #home-header
-  background-image: linear-gradient(to top, var(--base-color), transparent 100px), url('/assets/header_background.webp')
+  position: relative
+  background-image: url('/assets/header_background.webp')
   background-size: cover
   background-position: 50% 0%
   width: 100%
@@ -59,6 +60,29 @@
   filter: drop-shadow(0 1px 2px #0008) drop-shadow(0 0.1em 0.1em #0004)
 
 @import '/includes/page_sections.styl'
+
+#info
+  position: absolute
+  top: 50%
+  left: 50%
+  background-color: var(--background-color)
+  border-radius: 4px
+  padding: 30px 120px 30px 30px
+  box-shadow: 0 4px 16px #0008
+  transform: translateY(-50%)
+  
+  &>:first-child
+    margin-top: 0
+  
+  .row
+    gap: 8px
+    margin-bottom: 8px
+
+  .icon>svg
+    width: 24px
+    height: 24px
+    display: block
+    fill: #fff
 
 @media screen and (max-width: 1000px)
   .section
