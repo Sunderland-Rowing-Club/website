@@ -36,11 +36,11 @@ html
     #footer
       #footer-website
         div Sunderland Rowing Club
-        sub Website by Even Aasgaard Torset
+        sub Website by Even Aasgaard Torset &amp; Martin Murphy
       #footer-contact
-        //- .row
-        //-   .footer-icon: include /../includes/icons/at.svg
-        //-   | club@example.com
+        .row
+          .footer-icon: include /../includes/icons/at.svg
+          a(href="mailto:contact@sunderlandrowing.co.uk")| contact@sunderlandrowing.co.uk
         .row
           .footer-icon: include /../includes/icons/phone.svg
           | 07546 363662
@@ -51,6 +51,7 @@ html
             div Riverside Park, South Hylton
             div SR4 0RT
       #footer-social
+        a.footer-social-link(title='Youtube', href='https://www.youtube.com/channel/UC4yfIpmi4v-is0Rtvc5L5pQ'): include /../includes/icons/youtube.svg
         a.footer-social-link(title='Twitter', href='https://twitter.com/Sunderland_RC'): include /../includes/icons/twitter.svg
         a.footer-social-link(title='Instagram', href='https://www.instagram.com/sunderland_rowing_club/'): include /../includes/icons/instagram.svg
         a.footer-social-link(title='Facebook', href='https://www.facebook.com/sunderlandrowingclub'): include /../includes/icons/facebook.svg
