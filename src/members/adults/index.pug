@@ -1,7 +1,7 @@
 extends /../includes/members_page.pug
 
 block pageTitle
-  | Adult Training
+  | Adults Training
 
 block headerImage
   - const headerImage = 'members/adult_header'
@@ -9,12 +9,40 @@ block headerImage
 block sections
   .section.row
     .section-content
-      h1 Placeholder title
+      h1 
+      p There is an expectation that if you want to perform well, you need to train well. Training is built around weekend mornings and mid-week evenings on the water. There is flexibility within the programme for real life for those who need it and can be arranged with the Captain and coaches.. 
+
+      p Our training is supported by our successful and committed coaching team and a good fleet of both small and big boats.
+
+      h1 Training Times
+      table
+        tr
+          td Monday
+          td 5:30pm - 6:30pm
+        tr
+          td Tuesday
+          td 5:30pm - 6:30pm
+        tr
+          td Wednesday
+          td 5:30pm - 6:30pm
+        tr
+          td Thursday
+          td 5:30pm - 6:30pm
+        tr
+          td Friday
+          td Rest Day
+        tr
+          td Saturday
+          td Tide-dependent 10am
+        tr
+          td Sunday
+          td Tide-dependent 10am
+
       
     .section-attachments.important
       .plan.attachment
         .plan-name
-            div Seniors
+            div Adults
         .row
             .plan-price
               .plan-price-value £20
@@ -23,19 +51,40 @@ block sections
               .plan-price-value £180
               .plan-price-per year
       .attachment
-        h2 Coaches
-        img(src='/assets/members/coaches/1.webp')
+        h2 Coache
+        img(src='/assets/members/coaches/2.webp')
         h3 Chris Webb
         ul
           li DBS Checked
           li Level 2 Rowing Coach
           li First Aid
-          a.row(href="mailto:contact@sunderlandrowing.co.uk")
-            .icon: include /../includes/icons/email.svg
-            | Chris@sunderlandrowing.co.uk
+        - const email = 'chris@sunderlandrowing.co.uk'
+        a.attachment-button(href=`mailto:${email}`)
+          .icon: include /../includes/icons/email.svg
+          | #{email}
   .section
-    h1 Senior Traing
-    p Add however many sections you need.
+    h1 Senior Training
+    p The senior squad is for those who have some experience rowing or sculling, and who are willing and able to commit to a full training program six days a week.(Water based in the Summer, and land based in Winter), as well as Saturday and Sunday morning water outings (8am – 12pm) each weekend.
+
+    p The senior squad regularly competes at River Races and Regatta
+
+    h1 Masters Training
+    p The Masters’ Squad is for men and women aged 27+ with previous rowing experience who wish to be an active member of the our club
+
+    p these rowers are dedicated to enjoying themselves, the group welcomes rowers with all levels of experience and ability and offers rowing to suit all levels, from recreational / occasional to full competitive racing at international levels.
+
+    p So, whatever your ability level and whatever your ambition from rowing, you’ll be assured of a very warm and enthusiastic welcome at Sunderland Rowing Club. The Masters row on Saturday and Sunday mornings through the year and add evening rowing in the summer months.
+
+  .section
+    .section-split
+      div
+        h1 How to join!
+        p If you’d like to join our friendly and welcoming club then please get in touch by fuilling out the membership form on the right
+      
+        p If you have never rowed before you can come along to a Learn to Row events and then join the club afterwards
+        p All members must fill in a membership form.
+      <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc-gEDyUwiSQHSgOa-EdmHgLwfOXzj4-c7KILyvcCQgazEBzw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+      
 
 block afterGallery
   #videos.section

@@ -32,9 +32,8 @@ const imageObserver = new IntersectionObserver(function(entries, observer) {
 
 if (images.length) {
   for (const imgSrcOrig of images) {
-    const src = `/assets/${imgSrcOrig}`
     const img = E('img')
-    img.dataset.src = src
+    img.dataset.src = `/assets/thumbnails/${imgSrcOrig}`
     imageObserver.observe(img)
     const btn = E('div')
     btn.append(img)
@@ -42,7 +41,7 @@ if (images.length) {
     btn.addEventListener('click', evt => {
       document.body.style.overflow = 'hidden'
       const img = E('img')
-      img.src = src
+      img.src = `/assets/${imgSrcOrig}`
       const cover = E('div')
       cover.id = 'fullscreen-cover'
       cover.addEventListener('click', evt => {

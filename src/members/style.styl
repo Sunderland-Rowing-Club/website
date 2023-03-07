@@ -4,7 +4,7 @@
 .center
   display: flex
   justify-content: center
-  
+
   img
     display: block
 
@@ -12,23 +12,23 @@
   iframe
     border: 8px solid #fff !important
     border-radius: 4px
-  
+
   .section-split
     display: flex
-    flex-direction: row-reverse
+    flex-direction: row
     align-items: stretch
     width: 100%
-    
+
     @media screen and (max-width: 1000px)
       flex-direction: column
-      
-    &>:nth-child(2)
+
+    &>:first-child
       max-width: 100%
 
 #form
   width: calc(50% + 180px)
   min-width: 445px
-  min-height: 500px
+  min-height: 700px
   border: none !important
   background-color: #fff
   margin: -20px -120px -60px 60px
@@ -37,9 +37,9 @@
 
   @media screen and (max-width: 1000px)
     width: calc(100% + 40px)
-    margin: -20px -20px 0
-    border-top-left-radius: 4px
-    border-bottom-right-radius: 0
+    margin: 20px -20px -60px
+    border-top-right-radius: 0
+    border-bottom-left-radius: 4px
 
 #gallery, #videos
   display: grid
