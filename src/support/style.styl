@@ -2,6 +2,8 @@
 @import '/includes/page_sections.styl'
 
 .section-attachments
+  min-width: 400px
+  margin-left: 30px
   &>a
     display: block
     max-width: 400px
@@ -24,6 +26,8 @@
   border-radius: 4px
   padding: 12px 18px
   text-decoration: none
+  &:hover
+    background-color: var(--secondary-background-color)
       
 #crowdfunding
   gap: 10px
@@ -61,12 +65,14 @@
   grid-template-columns: @css{repeat(auto-fill, minmax(min(400px, 100%), 1fr))}
   justify-items: center
   
+  
   &>a
     display: block
     max-width: @css{min(400px, 100%)}
     border: 8px solid #fff
     border-radius: 4px
     cursor: pointer
+    background-color: #fff
 
     &>img
       display: block
