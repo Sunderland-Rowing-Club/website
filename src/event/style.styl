@@ -18,6 +18,10 @@
   min-height: 450px
   background-color: #fff
   
+  @media screen and (max-width: 1000px)
+    max-width: calc(100vw - 100px)
+    min-width: calc(100vw - 100px)
+  
   &:not([src])
     display: none
 

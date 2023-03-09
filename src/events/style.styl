@@ -26,9 +26,12 @@
 #upcoming-events
   display: flex
   flex-direction: column
-  align-items: flex-start
+  align-items: stretch
   gap: 20px
   padding-left: 30px
+  
+  @media screen and (max-width: 1000px)
+    padding-left: 0
   
 .event-button
   display: block
@@ -41,6 +44,13 @@
   
   &>.event-button-name
     font-size: 2em
+    
+  @media screen and (max-width: 1000px)
+    max-width: calc(100vw - 140px)
+    min-width: calc(100vw - 140px)
+    
+    &>.event-button-name
+      font-size: 1.5em
 
 #calendar
   margin: -10px 30px 60px

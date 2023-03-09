@@ -4,6 +4,11 @@
 .section-attachments
   min-width: 400px
   margin-left: 30px
+  
+  @media screen and (max-width: 1000px)
+    max-width: @css{min(400px, calc(100vw - 100px))}
+    min-width: @css{min(400px, calc(100vw - 100px))}
+    
   &>a
     display: block
     max-width: 400px
@@ -13,7 +18,8 @@
     cursor: pointer
     
     @media screen and (max-width: 1000px)
-      max-width: @css{min(400px, 100%)}
+      max-width: @css{min(400px, calc(100vw - 100px))}
+      min-width: @css{min(400px, calc(100vw - 100px))}
 
     &>img
       display: block

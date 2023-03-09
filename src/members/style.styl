@@ -40,6 +40,8 @@
     margin: 20px -20px -60px
     border-top-right-radius: 0
     border-bottom-left-radius: 4px
+    max-width: calc(100vw - 40px)
+    min-width: calc(100vw - 40px)
 
 #gallery, #videos
   display: grid
@@ -68,12 +70,20 @@
     $border-width = 8px
     user-select: none
     
+    @media screen and (max-width: 1000px)
+      max-width: calc(100vw - 80px)
+      min-width: calc(100vw - 80px)
+    
     &>img, &>iframe
       display: block
       background-color: #000
       width: unquote('calc(100% - ' + $border-width * 2 + ')')
       position: absolute
       inset: $border-width
+      
+      @media screen and (max-width: 1000px)
+        max-width: calc(100vw - 80px)
+        min-width: calc(100vw - 80px)
     
     &>img
       height: (250px - $border-width * 2)
