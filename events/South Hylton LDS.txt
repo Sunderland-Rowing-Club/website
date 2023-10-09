@@ -1,5 +1,4 @@
-Date: oct 23, 2023
-Time: 10:00
+Date: oct 28, 2023
+Time: 16:00
 Name: South Hylton LDS
-Image: 2
----
+Location: https://www.google.com/maps/d/embed?mid=1ZL6igco5SSLTmQk7IBt9Q5IxeCxj3gY&ehbc
