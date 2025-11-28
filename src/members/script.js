@@ -56,3 +56,8 @@ if (images.length) {
     showcase.append(btn)
   }
 }
+
+const signUpButton = document.querySelector('#sign-up-button')
+signUpButton.addEventListener('click', evt => {
+  document.querySelector('#sign-up-section').scrollIntoView({behavior: 'smooth'})
+})
