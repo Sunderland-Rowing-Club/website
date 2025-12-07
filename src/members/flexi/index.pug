@@ -1,0 +1,36 @@
+extends /../includes/members_page.pug
+
+block pageTitle
+  | Flexi-members
+
+block headerImage
+  - const headerImage = 'members/flexi_header'
+
+block sections
+  a#sign-up-button.header-button Sign Up Now
+  .section.row
+    .section-content
+      p This page is intended for Flexi-members. This membership is the same as an adult membership but is discounted for those who either work overseas or are attending a university not within the area, as members of this type will not be able to attend as many sessions as those with a full adult membership.
+      p This flexible option allows you to maintain your membership at a reduced rate while you’re away, preventing you from having to choose between full-price access or cancelling altogether. When you return during holidays, breaks, or visits, your full access is instantly restored—no rejoining fees and no hassle. It’s the perfect solution for anyone whose life takes them elsewhere but who still wants an easy way to stay part of our community.
+      p Please refer to our adult page for all other details regarding training and further information.
+      br
+      a.link-button(href='/members/adults') Adults Page
+
+  .section
+    #sign-up-section.scroll-stop
+    .section-split
+      div
+        h1 How To Join
+        p If you’d like to join our club, then please get in touch by filling out the membership form and completing payment below through GoCardless (alternatively, any membership payment can also be directly made to the club account; please contact a coach if this is your preferred method of payment). If you have not yet completed your free three sessions, please see our <a href="/members/learn">Learn-to-row</a> page first.
+        //a.payment-button(href='') //Needs GoCardless link 
+          h4 Monthly payments (£50 / yearly)
+          p £50 will be collected as one-off instant payment
+        p All members should complete the membership form to help us better track our current member payments.
+        p For any other questions, don't hesitate to get in touch by clicking the Contact Us button.
+        br
+        a.link-button(href='/contact') Contact Us
+
+      <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc-gEDyUwiSQHSgOa-EdmHgLwfOXzj4-c7KILyvcCQgazEBzw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+  .section
+    <div data-mc-src="ccc0a959-b2ba-446c-9ab1-9f696a5f44b4#youtube"></div><script src="https://cdn2.woxo.tech/a.js#6412038e34fe25f694e77401" async data-usrc></script>

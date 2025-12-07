@@ -1,4 +1,10 @@
 @import '/includes/global.styl'
+@import '/includes/page_sections.styl'
+@import '/includes/components/calendar.styl'
+
+#header
+  h1
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.533)) drop-shadow(0 .1em .1em rgba(0,0,0,.267))
 
 .link-button
   background-color: #fff
@@ -6,6 +12,7 @@
   border-radius: 4px
   padding: 12px 18px
   text-decoration: none
+  font-weight: bold
   &:hover
     background-color: var(--secondary-background-color)
 
@@ -19,44 +26,63 @@
   display: flex
   align-items: stretch
   flex-wrap: wrap
-  gap: 20px 60px
+  gap: 0px 60px
   margin-bottom: 60px
   
   &>:first-child
     flex: 1 1 480px
-    
-    &>:not(h1)
-      margin-left: 30px
 
+  p
+    margin-bottom: -3em
+    
 #upcoming-events
   display: flex
   flex-direction: column
   align-items: stretch
   gap: 20px
   padding-left: 30px
+  margin-top: 40px
   
   @media screen and (max-width: 1000px)
     padding-left: 0
   
 .event-button
   display: block
-  color: #fff
+  color:  #fff
   text-decoration: none
   border-radius: 4px
-  background-color: var(--background-color)
-  padding: 10px 60px 10px 20px
+  background-color:  #055C9D
+  padding: 10px 60px 15px 20px
   min-width: 400px
+  border: 2px solid var(--background-color)
+
+  &:hover
+    background-color: var(--secondary-background-color)
+    border: 2px solid #fff
+
+  .event-button-name
+    font-size: 1.25em
+    font-weight: bold
+
+  .event-button-date
+    font-size: 1em
   
-  &>.event-button-name
-    font-size: 2em
+  .event-button-description
+    font-size: 1em
+
+  .click-for-more
+    font-size: 0.75em
     
   @media screen and (max-width: 1000px)
     max-width: calc(100vw - 160px)
-    min-width: calc(100vw - 160px)
+    min-width: calc(100vw - 220px)
     // margin-right: 20px
     
     &>.event-button-name
       font-size: 1.5em
+    
+    &>.event-button-date
+      font-size: 1em
 
 // #calendar
 //   margin: -10px 30px 60px
@@ -69,3 +95,24 @@ iframe
     opacity: 0
   to
     opacity: 1
+
+.header-button
+  @extend .link-button
+  position: relative
+  box-shadow: 0 0.1em 0.2em #0008
+  background-color: var(--background-color)
+  color: #fff
+  text-shadow: 0 1px 3px #0008
+  font-size: 1.2em
+  cursor: pointer
+
+  &::before
+    content: ''
+    position: absolute
+    left: -4px
+    top: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    box-sizing: border-box
+    border: 2px solid #fff
+    border-radius: 8px

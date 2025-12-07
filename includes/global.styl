@@ -92,7 +92,7 @@ body
         color: #fff
   
   &:hover
-    background-color: var(--base-color)
+    background-color: var(--background-color)
     color: #fff
     
     svg
@@ -123,6 +123,8 @@ body
 
   .footer-icon
     fill: #000
+    margin-top: 5px
+    margin-right: 5px
     
     &>svg
       width: 24px
@@ -170,6 +172,20 @@ body
   display: flex
   align-items: center
   gap: 30px
+
+  .footer-details
+    display: flex
+    align-items: center
+    padding: 5px 15px 5px 10px
+    border-radius: 4px
+
+    &:hover
+      background-color: var(--background-color)
+      color: #fff
+      fill: #fff
+
+      .footer-icon
+        fill: #fff
   
   a
     text-decoration: none
@@ -254,6 +270,10 @@ body
     text-decoration: none
     padding: 10px 20px
 
+    &:hover
+      background-color: var(--background-color)
+      color: #fff
+
 #nav-bar-hamburger-button
   display: none
   
@@ -272,11 +292,11 @@ body
 table td:not(:last-child)
   border-right: 12px solid transparent
 
-@media screen and (min-width: 1001px)
+@media screen and (min-width: 1101px)
   #nav-list
     display: none !important
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1100px)
   #nav-bar
     padding-right: 0
 
@@ -303,3 +323,4 @@ table td:not(:last-child)
     
     &>.footer-social-link
       margin: 0
+      border-radius: 4px;

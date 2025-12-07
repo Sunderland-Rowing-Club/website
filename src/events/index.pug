@@ -1,30 +1,45 @@
 extends /../includes/page.pug
 
+append html
+  - const headerImage = 'events_header'
+
 block head
   - css = '/events/style.css'
-  //- link(rel='preload', as='image', href=`/assets/${headerImage}.webp`)
+  link(rel='preload', as='image', href=`/assets/${headerImage}.webp`)
   script(src='https://code.jquery.com/jquery-3.6.3.slim.min.js')
   script(type='module', src='/events/script.js')
 
 block content
+  #header(style=`background-image:linear-gradient(to top, var(--base-color), transparent 100px),url('/assets/${headerImage}.webp');`)
+    #home-header-text
+      h1 Events
+  #sections
+    a#upcoming-events-button.header-button Upcoming Events
+  br
+  br
   template#chevron-left-icon: include /../includes/icons/chevron-left.svg
   template#chevron-right-icon: include /../includes/icons/chevron-right.svg
-  #info
-    #info-section
-      div
-        h1 Events
-        p This page has all of our training times, club meatings, fundraising, upcoming races big and small please click this link to add it to your calendar 
-        ul
-          li Adults Training
-          li Juniors Training
-          li Important Races
-          li Learn to row
+  
+  #sections
+    .section
+      #info
+        h1 Types of Competition
+        p This page includes all information relating to racing competitively. Typically races are one of two types:
+        h2 Regattas
+        p A regatta is the shorter of the two (usually up to 2 km); in this event, two or more boats start side by side and race to be the fastest to the finish. At events this is often styled as a tournament to accommodate the large number of crews competing in the same group. These races occur in the spring and summer months. The Olympics and Henley Regatta are the most common places to see this type of racing.
+        h2 Heads
+        p A head is the longer of the two (usually over 2 km, with some exceptions). In this event all boats go up to the start line and are then sent one at a time down the course (usually 10–20 seconds apart). The fastest timed crew in each group is then the winner. These races occur in the autumn and winter months. The Head of the River Race and the Boat Race are the most common places to see this type of racing.
 
-      div
+    .section
+      #upcoming-events-section.scroll-stop
+      #info
         h1 Upcoming Events
+        p Our club often competes in events both local and national; below are links to events that we aim to attend. Locally more races are held, all of which can be found on <a href="https://www.nerowing.com/calendar.html">Northern Rowing's website</a>; alternatively, a larger collection of nationwide events can be found on <a href="https://www.britishrowing.org/competition-calendar/">British Rowing's website</a>.
         #upcoming-events
 
-    a.link-button(href="https://calendar.google.com/calendar/u/0?cid=c3VuZGVybGFuZHJvd2luZ2NsdWIxODg5QGdtYWlsLmNvbQ") Subscribe to calendar
-
-    <iframe src="https://embed.styledcalendar.com/#Jg5g184S5BBmqOvReEeP" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
-    <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+    .section
+      #info
+        h1 Calendar
+        p The club calendar provides dates and times for club meetings, fundraising opportunities and races. If you would like to stay updated with these events, please click the subscribe button below.
+        <iframe src="https://embed.styledcalendar.com/#Jg5g184S5BBmqOvReEeP" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+        <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>

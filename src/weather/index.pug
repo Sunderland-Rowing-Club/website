@@ -1,0 +1,27 @@
+extends /../includes/page.pug
+
+append html
+  - const headerImage = 'weather_header'
+
+block head
+  - css = '/weather/style.css'
+  link(rel='preload', as='image', href=`/assets/${headerImage}.webp`)
+  script(src='https://code.jquery.com/jquery-3.6.3.slim.min.js')
+  script(type='module', src='/events/script.js')
+
+block content
+  #header(style=`background-image:linear-gradient(to top, var(--base-color), transparent 100px),url('/assets/${headerImage}.webp');`)
+    #home-header-text
+      h1 Weather and Conditions
+
+  #sections
+    .section
+      h1 Tides and Weather
+      p Weather and environmental conditions play a major role in rowing, shaping everything from safety to technique. Calm, flat water allows for smooth, efficient strokes, while rough or irregular water may negatively affect technique, making for more adverse sessions when the weather is not ideal. 
+      p Wind and tide are typically the most influential factors because they directly affect water surface conditions. Fast winds can often produce choppy waves that make balance and blade work more difficult, along with making steering trickier. When wind speeds rise, waves and whitecaps can make rowing unsafe, especially for smaller boats. Tides add another layer of complexity, as tides affect water depth, water speed, and which areas of the waterway are safe to travel. Higher tides create deeper, more easily navigable water, while low tides can expose hazards such as sandbars, rocks, docks, or submerged obstacles that are normally hidden. Depending on the height and timing of the tide, currents may flow more quickly, making it very difficult to row against, as rowing against a strong current requires more power.
+      p Light rain usually does not stop practice, but heavy rain can obscure vision and create unpredictable water conditions. Thunderstorms, especially those with lightning, are a clear “no row” situation. Fog, mist, and darkness often reduce visibility, making it harder for crews to see other boats, obstacles, or riverbanks, increasing the risk of accidents, thereby also resulting in “no row” situations.
+      p Temperature is another important factor. Cold air and water increase the risk of hypothermia and make hands stiff, reducing grip and control. Extremely cold conditions may require stricter safety protocols or cancellations. Hot weather brings the opposite challenges: heat stress, dehydration, and faster fatigue. It is very important to remember to stay hydrated in these warmer temperatures. Temperature is the main reason why we ask for our members to wear suitable clothing; see British Rowing for more info.
+      p Below you will find a useful tool for tide and weather estimates for the next five days.
+      br
+      //<script id="tide-widget-script" type="text/javascript" onload="createTideInstance('tidewidget__242', { includeMap: false, includeTitle: false, includeStyles: true, numberDays: 5 })" src="https://tides.today/en/c/england/tyne-and-wear/sunderland/widget.js" async></script><div id="tidewidget__242"></div> 
+      <script type="text/javascript" src="https://tides.today/en/%F0%9F%8C%8D/england/tyne-and-wear/sunderland/widget.js" async></script><script src="https://tides.today/en/%F0%9F%8C%8D/england/tyne-and-wear/sunderland/widget-init.js?includeMap=false&amp;includeWeather=true&amp;includeStyles=true&amp;includeTitle=false&amp;numberDays=5&amp;weatherUnit=c" async></script><div id="tidewidget__242"></div>

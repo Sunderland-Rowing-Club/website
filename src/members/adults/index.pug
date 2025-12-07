@@ -7,37 +7,81 @@ block headerImage
   - const headerImage = 'members/adult_header'
 
 block sections
+  a#sign-up-button.header-button Sign Up Now
+
   .section.row
     .section-content
-      h1 
-      p There is an expectation that if you want to perform well, you need to train well. Training is built around weekend mornings and mid-week evenings on the water. There is flexibility within the programme for real life for those who need it and can be arranged with the Captain and coaches.. 
-
-      p Our training is supported by our successful and committed coaching team and a good fleet of both small and big boats.
-
+      p This page is intended for adults who have completed the three <a href="members/learn">free learn-to-row sessions</a>. Once you have completed your free sessions, you can then join our other adult members and continue your training. 
+      p Our adult squad is for anyone no longer in compulsory full-time education; this typically applies to all ages 18+. We aim to introduce rowing to everyone, both socially at the club and competitively at local and regional races (please see the <a href="/events">events page</a> for more information on races).
+      p Sessions will aim to improve your rowing by mastering your ability to row with others confidently. Once you are able to get into a boat with any other semi-experienced members and consistently row without any major difficulties, you will then be invited to join more on-the-water sessions. Typically sessions will vary between either longer paddles aimed at technical ability and endurance or sprint-based sessions that may challenge both fitness and technical ability in a faster-paced environment.
+      p These sessions are split in this way, as the invitation-only sessions can be a lot more challenging for less experienced rowers, and the open-to-all sessions will have a lot more focus on technical ability. This method works to progress each individual in the most well-suited environment possible so that people are not pushed too early, which may subsequently lead to a loss of interest or frustration. Please remember that rowing is like anything else and will take time to master, so don't put too much pressure on yourself. In addition, separating sessions also helps the coaches to manage safety cover and time spent with each crew; having many crews on the water at varying abilities can be very difficult to manage, especially with our ever-expanding community of adults.
+      p Invitation-only sessions only apply outside of winter training; during this time all weekday sessions are available to everyone. This is because sessions are moved indoors and become predominantly RowErg based, as it is too dark outside. Session difficulty may still vary per day, but a coach can provide easier sessions or further information as to which days are less challenging and how sessions can be adapted to best suit you.
       h1 Training Times
+      p Below is a rough outline for adult training times; however, this is subject to change for any given week due to events the club may be participating in, weather conditions, or any other extenuating circumstances.
       table
+        p <strong>Summer Training</strong>:
+        p <small><i>(Typically March through to September)</i></small> 
         tr
           td Monday
+          td Invitation only
           td 5:30pm - 6:30pm
         tr
           td Tuesday
+          td Invitation only
           td 5:30pm - 6:30pm
         tr
           td Wednesday
-          td 5:30pm - 6:30pm
+          td Open to all
+          td 5:30pm - 6:30pm 
         tr
           td Thursday
+          td Invitation only
           td 5:30pm - 6:30pm
         tr
           td Friday
           td Rest Day
         tr
           td Saturday
-          td Tide-dependent 10am
+          td Open to all
+          td Usually 10:30am  
+          td (However this is dependent on both the weather and events)
         tr
           td Sunday
-          td Tide-dependent 10am
-
+          td Open to all
+          td Usually 10:30am  
+          td (However this is dependent on both the weather and events)
+      table
+        p <strong>Winter Training</strong>:
+        p <small><i>(Typically October through to February)</i></small>
+        tr
+          td Monday
+          td Open to all
+          td 5:30pm - 6:30pm
+        tr
+          td Tuesday
+          td Open to all
+          td 5:30pm - 6:30pm
+        tr
+          td Wednesday
+          td Open to all
+          td 5:30pm - 6:30pm 
+        tr
+          td Thursday
+          td Open to all
+          td 5:30pm - 6:30pm
+        tr
+          td Friday
+          td Rest Day
+        tr
+          td Saturday
+          td Open to all
+          td Usually 10:30am  
+          td (However this is dependent on both the weather and events)
+        tr
+          td Sunday
+          td Open to all
+          td Usually 10:30am  
+          td (However this is dependent on both the weather and events)
       
     .section-attachments.important
       .plan.attachment
@@ -53,37 +97,34 @@ block sections
           .plan-price
             .plan-price-value £180
             .plan-price-per Yearly
+      
       .attachment
-        h2 Coache
-        img(src='/assets/members/coaches/2.webp')
+        h2 Club Captain/Head Coach
         h3 Chris Webb
+        img(src='/assets/members/coaches/2.webp')
         ul
-          li DBS Checked
           li Level 2 Rowing Coach
+          li DBS Checked
           li First Aid
         - const email = 'chris@sunderlandrowing.co.uk'
         a.attachment-button(href=`mailto:${email}`)
           .icon: include /../includes/icons/email.svg
           | #{email}
+  
   .section
-    h1 Senior Training
-    p The senior squad is for those who have some experience rowing or sculling, and who are willing and able to commit to a full training program six days a week.(Water based in the Summer, and land based in Winter), as well as Saturday and Sunday morning water outings (8am – 12pm) each weekend.
-
-    p The senior squad regularly competes at River Races and Regatta
-
-    h1 Masters Training
-    p The Masters’ Squad is for men and women aged 27+ with previous rowing experience who wish to be an active member of the our club these rowers are dedicated to enjoying themselves, the group welcomes rowers with all levels of experience and ability and offers rowing to suit all levels, from recreational / occasional to full competitive racing at international levels.
-
-    p So, whatever your ability level and whatever your ambition from rowing, you’ll be assured of a very warm and enthusiastic welcome at Sunderland Rowing Club. The Masters row on Saturday and Sunday mornings through the year and add evening rowing in the summer months.
-
+    h1 Senior, Masters, and Club Training
+    p The senior squad is for those who are experienced in rowing or sculling and who are looking to regularly compete at head races and regattas (further information for head races and regattas can be found on our <a href="/events">events page</a>).
+    p Masters is a category for anyone aged 27+ who has experience in rowing or sculling; this is just a specific category of senior used to separate age groups so as not to disadvantage others based on age. However, if you are over the age of 27, you aren't restricted to only racing as a master; the opportunity to race as a senior is still available. British Rowing provides even more information on <a href="https://www.britishrowing.org/go-rowing/types-of-rowing/masters/">Masters Rowing</a>.
+    p Club rowing is aimed at any member of the club who just wants to row while possibly enjoying the social interaction provided by all of our members and improving/maintaining fitness.
+    p Part of more experienced training includes Saturday and Sunday morning water outings from 8am until 10:30am (however, these training sessions are dependent on both the weather and events) each weekend. Typically these will challenge both fitness and technical ability, building up to racing competitively, and so are invitation only.
+    p So, whatever your ability level and whatever your ambition from rowing, you’ll be assured of a very warm and enthusiastic welcome at Sunderland Rowing Club.
+  
   .section
+    #sign-up-section.scroll-stop
     .section-split
       div
-        h1 How to join!
-        p If you’d like to join our friendly and welcoming club then please get in touch by fuilling out the membership form on the right
-      
-        p If you have never rowed before you can come along to a Learn to Row events and then join the club afterwards
-
+        h1 How To Join
+        p If you’d like to join our club, then please get in touch by filling out the membership form and completing payment below through GoCardless (alternatively, any membership payment can also be directly made to the club account; please contact a coach if this is your preferred method of payment). If you have not yet completed your free three sessions, please see our <a href="/members/learn">Learn-to-row</a> page first.
         a.payment-button(href='https://pay.gocardless.com/AL00066PM02977')
           h4 Monthly payments (£15 / monthly)
           p £15 will be collected automatically on the last day of the month
@@ -95,8 +136,10 @@ block sections
         a.payment-button(href='https://pay.gocardless.com/BRT0001XV8ZJ3AX')
           h4 Yearly payment (£180 / yearly)
           p £180 will be collected as one-off instant payment
-
-        p All members must fill in a membership form.
+        p All members should complete the membership form to help us better track our current member payments.
+        p For any other questions, don't hesitate to get in touch by clicking the Contact Us button.
+        br
+        a.link-button(href='/contact') Contact Us
 
       <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSc-gEDyUwiSQHSgOa-EdmHgLwfOXzj4-c7KILyvcCQgazEBzw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 

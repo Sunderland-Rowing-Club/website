@@ -1,0 +1,177 @@
+@import '/includes/global.styl'
+@import '/includes/page_sections.styl'
+
+#header
+  h1
+    display: block
+    text-align: center
+    width: @css{min(calc(100% - 300px), 1460px)}
+    filter: drop-shadow(0 1px 2px #0008) drop-shadow(0 0.1em 0.1em #0004)
+    white-space: nowrap;
+
+#tide-widget-script+div
+  width: 100%
+
+.tides-widget__container
+  color: #000
+  border-radius: 4px !important
+  width: calc(100%+60px)
+  max-width: unset !important
+  padding: 0 !important
+  border: none !important
+
+  p.tides-widget__caption
+    color: #fff
+    text-align: left
+    margin-left: 1em
+    font-size: .9em
+    font-style: normal
+    margin-bottom: 0
+
+  p.title
+    color: #fff
+    font-size: .9em
+    font-weight: normal
+
+  p.min-max
+    font-size: .9em
+    color: #fff
+    text-align: left
+    margin-left: 0em
+    font-style: normal
+
+  caption
+    font-style: normal !important
+    font-size: 0.9em
+    margin-top: 1em
+    margin-left: 1em
+    margin-bottom: 0 !important
+    color: #fff !important
+    cursor: default
+    user-select: none
+    
+  table
+    th
+      border-color: var(--background-color) !important
+      border-bottom: .25em solid var(--background-color) !important
+      color: #fff
+
+    td
+      border-bottom: none !important
+      text-transform: capitalize
+      background-color: #fff
+      
+    tr  
+      margin-top: 1em
+
+    tr:last-child>td
+      &:first-child, &:last-child
+        border-bottom-left-radius: 4px
+        border-bottom-right-radius: 4px
+
+  .tides-widget__tables
+    gap: 1em
+
+  .tides-widget__table-container
+    margin: 0 !important
+    background: linear-gradient(var(--secondary-background-color) 50%, #fff 50%)
+    border-radius: 6px 
+    padding-bottom: 4em
+    max-width: 100%
+
+    table td
+      padding-left: 15px !important
+
+    table th
+      padding-left: 14px !important
+
+    .tides-widget__weather
+      margin-left: 1em
+      background: none !important  
+      min-height: 20px 
+      max-height: 30px
+      padding-left: 0
+      padding-bottom: 1em
+
+      .title
+        font-weight: normal
+      
+.tides-widget__copyright
+  &>:first-child
+    display: none
+
+  &>:nth-child(2)
+    margin: 0
+    padding: 4px 8px
+    font-size: 0.8em
+    margin: 60px -120px -80px -60px
+    cursor: default
+    user-select: none
+    opacity: 0.7
+    white-space: pre-wrap
+    max-width: calc(100% - 60px)
+
+    &::before
+      content: 'Tide times '
+
+    &::before, small, small>a
+      color: #fff !important
+      font-size: 1em !important
+      white-space: pre-wrap
+
+    small>a
+      cursor: pointer
+
+      &::after
+        display: none
+
+@media screen and (max-width: 1200px)
+  
+  .tides-widget__tables
+    gap: 1em
+    max-width: calc(100% - 70px)
+    padding: 20px
+
+@media screen and (max-width: 1000px)
+
+  .tides-widget__container
+    width: 100%
+
+    .tides-widget__weather
+      .title
+        font-weight: bold !important
+
+
+  .tides-widget__tables
+    margin: 0 !important
+
+  .tides-widget__copyright>:nth-child(2)
+    margin: 60px -20px -80px -20px
+
+  p.tides-widget__caption
+    font-weight: bold
+  
+  p.min-max
+    font-weight: bold
+
+  p.title
+    font-weight: bold
+
+  caption
+    font-weight: bold
+  
+  table
+    th
+      font-weight: bold
+
+@media screen and (max-width: 740px)
+
+  #header
+    text-align: center
+    vertical-align: middle
+
+    h1
+      white-space: wrap
+      margin: auto
+      width: 100%
+

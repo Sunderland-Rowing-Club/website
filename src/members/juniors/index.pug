@@ -7,38 +7,80 @@ block headerImage
   - const headerImage = 'members/juniors_header'
 
 block sections
+  a#sign-up-button.header-button Sign Up Now
+
   .section.row
     .section-content
-      h1 A great way to have fun and keep fit!
-      p Our junior squad is for anyone aged between 10 and 18, our current squad is made up of 40 members. The club aims to introduce rowing to young people both competitvely and socially.  We compete in local and regional regattas and head races. 
-
-      p We offer taster days for juniors during the school holidays about 3 or 4 times per year. These days give the potential rower a chance to have a go at all aspects of rowing (indoor rowing, circuit training as well as getting out on to the water) to see whether it is a sport they may enjoy. The days are good fun and open to all.
-
-      p If you would like to be kept informed of the date of our next taster day, please send a request by email.
-
+      p This page is intended for juniors who have completed the three <a href="members/learn">free learn-to-row sessions</a>. Once you have completed your free sessions, you can then join our other junior members and continue your training.
+      p Our junior squad is for anyone still in compulsory full-time education, typically between the ages of 10 and 18. We aim to introduce rowing to young people both socially at the club and competitively at local and regional races (please see the <a href="/events">events page</a> for more information on races).
+      p Sessions will aim to improve your rowing by mastering your ability to row with others confidently. Once you are able to get into a boat with any other semi-experienced members and consistently row without any major difficulties, you will then be invited to join more on-the-water sessions. Typically sessions will vary between either longer paddles aimed at technical ability and endurance or sprint-based sessions that may challenge both fitness and technical ability in a faster-paced environment.
+      p These sessions are split in this way, as the invitation-only sessions can be a lot more challenging for less experienced rowers, and the open-to-all sessions will have a lot more focus on technical ability. This method works to progress each individual in the most well-suited environment possible so that people are not pushed too early, which may subsequently lead to a loss of interest or frustration. Please remember that rowing is like anything else and will take time to master, so don't put too much pressure on yourself. In addition, separating sessions also helps the coaches to manage safety cover and time spent with each crew; having many crews on the water at varying abilities can be very difficult to manage, especially with our ever-expanding community of juniors.
+      p Invitation-only sessions only apply outside of winter training; during this time all weekday sessions are available to everyone. This is because sessions are moved indoors and become predominantly RowErg based, as it is too dark outside. Session difficulty may still vary per day, but a coach can provide easier sessions or further information as to which days are less challenging and how sessions can be adapted to best suit you.
+      p We also offer taster days for juniors during school holidays throughout the year. These days give a potential rower a chance to have a go at all aspects of rowing (indoor rowing and circuit training as well as getting out onto the water) to see whether it is a sport they may enjoy. The days are good fun and open to all. If you would like to be kept informed of the date of our next taster day, please send a request by email, although these days are also advertised on our social media.
+      br 
+      a.link-button(href="/contact") Email Us
       h1 Training Times
+      p Below is a rough outline for junior training times; however, this is subject to change for any given week due to events the club may be participating in, weather conditions, or any other extenuating circumstances.
       table
+        p <strong>Summer Training</strong>:
+        p <small><i>(Typically March through to September)</i></small> 
         tr
           td Monday
-          td 5:30pm - 6:30pm
+          td Invitation only
+          td 5:15pm - 6:30pm
         tr
           td Tuesday
-          td 5:30pm - 6:30pm
+          td Open to all
+          td 5:15pm - 6:30pm
         tr
           td Wednesday
-          td 5:30pm - 6:30pm
+          td Open to all
+          td 5:15pm - 6:30pm
         tr
           td Thursday
-          td 5:30pm - 6:30pm
+          td Invitation only
+          td 5:15pm - 6:30pm
         tr
           td Friday
           td Rest Day
         tr
           td Saturday
-          td Tide-dependent 10am
+          td Usually 10:30am 
+          td (However this is dependent on both the weather and events)
         tr
           td Sunday
-          td Tide-dependent 10am
+          td Usually 10:30am 
+          td (However this is dependent on both the weather and events)
+      table
+        p <strong>Winter Training</strong>:
+        p <small><i>(Typically October through to February)</i></small>
+        tr
+          td Monday
+          td Open to all
+          td 5:15pm - 6:30pm
+        tr
+          td Tuesday
+          td Open to all
+          td 5:15pm - 6:30pm
+        tr
+          td Wednesday
+          td Open to all
+          td 5:15pm - 6:30pm
+        tr
+          td Thursday
+          td Open to all
+          td 5:15pm - 6:30pm
+        tr
+          td Friday
+          td Rest Day
+        tr
+          td Saturday
+          td Usually 10:30am 
+          td (However this is dependent on both the weather and events)
+        tr
+          td Sunday
+          td Usually 10:30am 
+          td (However this is dependent on both the weather and events)
 
     .section-attachments.important
       .plan.attachment
@@ -56,25 +98,25 @@ block sections
             .plan-price-value £150
             .plan-price-per Yearly
       .attachment
-        h2 Coach
-        img(src='/assets/members/coaches/1.webp')
+        h2 Junior Coach
         h3 Sarah Hodge
+        img(src='/assets/members/coaches/1.webp')
         ul
-          li DBS Checked
           li Level 2 Rowing Coach
+          li DBS Checked
           li First Aid
-        - const email = 'sarah@sunderlandrowing.co.uk'
+        #email-section.scroll-stop
+        - const email = 'Sarahsue_12345@hotmail.co.uk'
         a.attachment-button(href=`mailto:${email}`)
           .icon: include /../includes/icons/email.svg
           | #{email}
+  
   .section
+    #sign-up-section.scroll-stop
     .section-split
       div
-        h1 How to join!
-        p If you'd like to join our friendly and welcoming club then please get in touch by fuilling out the membership form on the right.
-        
-        p If you have never rowed before you can come along to a Learn to Row events and then join the club afterwards.
-        
+        h1 How To Join
+        p If you’d like to join our club, then please get in touch by filling out the membership form and completing payment below through GoCardless (alternatively, any membership payment can also be directly made to the club account; please contact a coach if this is your preferred method of payment). If you have not yet completed your free three sessions, please see our <a href="/members/learn">Learn-to-row</a> page first.
         a.payment-button(href='https://pay.gocardless.com/AL00066PKVGRNG')
           h4 Monthly payments (£12.50 / monthly)
           p £12.50 will be collected automatically on the last day of the month
@@ -86,8 +128,10 @@ block sections
         a.payment-button(href='https://pay.gocardless.com/BRT0001XTVPAJ16')
           h4 Yearly payment (£150 / yearly)
           p £150 will be collected as one-off instant payment
-
-        p All members must fill in a membership form.
+        p All juniors should have a parent or guardian complete the membership form to help us better track our current member payments.
+        p For any other questions, don't hesitate to get in touch by clicking the Contact Us button.
+        br
+        a.link-button(href='/contact') Contact Us
 
       <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLScw7qFAdNHZWY6J5skS26_kwqXsOYqXfGDcumrv9BXFwRFXWA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 

@@ -5,8 +5,6 @@ append html
 
 block head
   - css = '/support/style.css'
-  - desc = ''
-  - image = ``
 
   link(rel='preload', as='image', href=`/assets/${headerImage}.webp`)
   script(type='module', src='/support/script.js')
@@ -16,24 +14,25 @@ block content
     h1 Support our Future
   #sections
 
-    //- .section
-    //-   .sub-section
-    //-     .section-content
-    //-       h1 Help us get more people Rowing!
-    //-       p Our aim is to increase the uptake of rowing by continuing to offer our Free Learn-to-Row courses, which introduce people to rowing, but to do so we need to update some of the equipment that we use as it has become unsuitable due to age and use.
+    //.section
+      .sub-section
+        .section-content
+          h1 Help us get more people Rowing!
+          p Our aim is to increase the uptake of rowing by continuing to offer our Free Learn-to-Row courses, which introduce people to rowing, but to do so we need to update some of the equipment that we use as it has become unsuitable due to age and use.
 
-    //-       p Gift Aid is a scheme that allows charities to reclaim tax on a donation made by a UK taxpayer, which means your donations will be worth 25% more to us at no extra cost to you. If you Gift Aid your donations we can claim back from the government 25p for every £1 you donate to the club.
+          p Gift Aid is a scheme that allows charities to reclaim tax on a donation made by a UK taxpayer, which means your donations will be worth 25% more to us at no extra cost to you. If you Gift Aid your donations we can claim back from the government 25p for every £1 you donate to the club.
 
-    //-       p This additional income really does make a big difference, so please don't forget to Gift Aid donations if you are a UK tax payer.
-    //-       br
-    //-       a.link-button(href='https://www.spacehive.com/help-us-get-more-people-rowing') Donate
+          p This additional income really does make a big difference, so please don't forget to Gift Aid donations if you are a UK tax payer.
+          br
+          a.link-button(href='https://www.spacehive.com/help-us-get-more-people-rowing') Donate
 
-    //-     .section-attachments.important.qr
-    //-       .row.attachment
-    //-         a(href='https://www.spacehive.com/help-us-get-more-people-rowing', target='_blank', rel='noopener'): img(data-src='/assets/support/spacehive.webp')
-    //-         a(href='https://www.spacehive.com/help-us-get-more-people-rowing', target='_blank', rel='noopener'): img(data-src='/assets/support/help-us-get-more-people-rowingQR.webp', height=218)
+        .section-attachments.important.qr
+          .row.attachment
+            a(href='https://www.spacehive.com/help-us-get-more-people-rowing', target='_blank', rel='noopener'): img(data-src='/assets/support/spacehive.webp')
+            a(href='https://www.spacehive.com/help-us-get-more-people-rowing', target='_blank', rel='noopener'): img(data-src='/assets/support/help-us-get-more-people-rowingQR.webp', height=218)
 
-    .section
+    // Dead link below
+    //.section
       .sub-section
         .section-content
           h1 Sunderland Boat Club House Expansion
@@ -45,14 +44,28 @@ block content
           .row.attachment
             a(href='https://www.justgiving.com/crowdfunding/sunderlandrowingclubhouse', target='_blank', rel='noopener'): img(data-src='/assets/support/justgiving.webp')
             a(href='https://www.justgiving.com/crowdfunding/sunderlandrowingclubhouse', target='_blank', rel='noopener'): img(data-src='/assets/support/sunderland-rowing-club-house-qr.webp', height=218)
+    
+    .section 
+      .sub-section 
+        .section-content 
+          h1 Boxing Day Dip 
+          p Who's up for a Boxing Day dip challenge? 🏊‍♂❄
+          p We're looking for brave (or maybe just slightly crazy!) volunteers to take part in a sponsored Boxing Day Dip - all to raise funds for our club!
+          p Originally, Hayden was offered sponsorship support from Greg Peacock (former councillor and club supporter) for the dip. But in true team spirit, Hayden has decided to donate the opportunity to the club so that everyone can benefit.
+          p Now we just need you to make it happen! Everyone's welcome - juniors can join too with parental supervision and discretion.
+          p Let's make a splash for the club this Christmas! 🌊🎄
+
+        .section-attachments.important.qr
+          .row.attachment
+            a(href='https://www.justgiving.com/crowdfunding/gregory-peacock?utm_medium=CF&utm_source=CL', target='_blank', rel='noopener'): img(data-src='https://images.justgiving.com/image/e8ffafc6-6a1e-4365-a4d9-c60eb072b42f.jpg?template=Size800w')
+            a(href='https://www.justgiving.com/crowdfunding/sunderlandrowingclubhouse', target='_blank', rel='noopener'): img(data-src='/assets/support/BoxingDayDipQR.webp', height=218)
+            
     .section
       .sub-section
         .section-content
-          h1 Friend of the club
+          h1 Become A Friend Of The Club
           p is our initiative to allow past and present stay connected and support the club. Friends will be sent quarterly updates on the Club’s activities, and invited to brilliant events that bring everyone together, including an annual party.
-
           p you will also be entered in to the club lottery, from just £5, with monthly prize draws for cash prizes, with half of all proceeds going to Sunderland Rowing Club to fund the club and its activities.
-
           p To support us as a Friend of the Club please select how much you would like to contribute a month from the links below. The links will open in GoCardless where you can complete your Friends of the Club Direct Debit details.
         
         .section-attachments.important
@@ -68,14 +81,12 @@ block content
               .plan-price
                 .plan-price-value £5 
                 .plan-price-per Monthly
-                .plan-price (1 lottery points)
           a.plan.attachment(href='https://pay.gocardless.com/AL00066PMRZ545')
             .plan-name 
             .row
               .plan-price
                 .plan-price-value £10 
                 .plan-price-per Monthly
-                .plan-price (2 lottery points)
 
 
     .section
@@ -85,8 +96,8 @@ block content
 
           p With your organisation’s support, we can build on our success, offer better opportunities to our members and greater accessibility to rowing to more people in Sunderland. We can continue our work with local schools, encouraging children to participate in sport and promote an active and healthy lifestyle across Sunderland.
 
-          h1 How you could support us
-          ul
+          //h1 How you could support us
+          //ul
             li £30,000: eight boat
             li £15,000: four boat
             li £12:000: double boat
@@ -119,17 +130,15 @@ block content
           p Every time you shop online via easyfundraising at one of the 3,300 retailers including John Lewis, Sainsbury’s and Booking.com, a donation will be made to Sundland Rowing Club and it won’t cost you an extra penny.
           p It’s really simple to get started: click the button and Sign up for free!
           p Get shopping – your donations will be collected by easyfundraising and automatically sent to Sunderland Rowing Club. It couldn’t be easier! There are no catches or hidden charges and Sunderland Rowing Club will be really grateful for your donations.
-          br
-          a.link-button(href='https://www.easyfundraising.org.uk/causes/sunderlandrowingclub/') Easyfundraising Club Page
-
+          
         .section-attachments.important.qr
           .row.attachment
             a(href='https://www.easyfundraising.org.uk/causes/sunderlandrowingclub/', target='_blank', rel='noopener'): img(data-src='/assets/support/easyfundraising.webp')
             a(href='https://www.easyfundraising.org.uk/causes/sunderlandrowingclub/', target='_blank', rel='noopener'): img(data-src='/assets/support/easyfundraising-qr.webp', height=260)
           #easyfundraising-info £#[span#easyfundraising-total -] from #[span#easyfundraising-supporters n/a] supporters
 
-    ///h1 Sponsors
-    ///#sponsors.section
+    //h1 Sponsors
+    //#sponsors.section
       a(href='https://WEBSITE HERE/', target='_blank', rel='noopener'): img(data-src='/assets/support/COMPENY LOGO HERE.webp')
       div
         p DATE HERE

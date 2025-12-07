@@ -4,7 +4,6 @@ import crypto from 'node:crypto'
 
 import sharp from 'sharp'
 import { DateTime } from 'luxon'
-import { marked } from 'marked'
 
 async function* getFiles(dir) {
   const dirents = await fs.promises.readdir(dir, { withFileTypes: true })
@@ -31,6 +30,7 @@ const reEventTime = /^Time:\s*/i
 const reEventRecurs = /^Recurs:\s*/i
 const reEventEnds = /^Ends:\s*/i
 const reEventName = /^Name:\s*/i
+const reEventDescription = /^Description:\s*/i
 const reEventImage = /^Image:\s*/i
 const reEventColor = /^Colou?r:\s*/i
 const reEventLocation = /^Location:\s*/i
@@ -69,19 +69,19 @@ async function processEvent(file) {
   const hash = shasum
     .digest('hex')
     .match(/.{4}/g)
-    .map(e => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'[parseInt(e, 16)%62])
+    .map(e => 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'[parseInt(e, 16) % 62])
     .join('')
   const lines = (await fs.promises.readFile(file, 'utf-8')).split('\n').map(e => e.trim())
   let date,
-      time = '00:00',
-      recurs,
-      ends,
-      name,
-      image,
-      color,
-      location,
-      link,
-      desc
+    time = '00:00',
+    recurs,
+    ends,
+    name,
+    image,
+    color,
+    location,
+    link,
+    desc
   for (let i = 0; i < lines.length; i++) {
     if (typeof desc !== 'undefined') {
       desc.push(lines[i])
@@ -126,7 +126,7 @@ async function processEvent(file) {
       event.link = link
     }
     if ((typeof desc !== 'undefined') && desc.join('\n').trim().length) {
-      event.desc = marked.parse(desc.join('\n').trim())
+      event.desc = desc.join('\n').trim()
     }
     return [hash, event]
   } else { // Recurring event
@@ -154,7 +154,7 @@ async function processEvent(file) {
       event.link = link
     }
     if ((typeof desc !== 'undefined') && desc.join('\n').trim().length) {
-      event.desc = marked.parse(desc.join('\n').trim())
+      event.desc = desc.join('\n').trim()
     }
     return [hash, event]
   }
@@ -197,7 +197,8 @@ export default {
     await fs.promises.writeFile('dist/assets/events.json', JSON.stringify(Object.fromEntries(events)), 'utf-8')
   },
   serveFile: [
-    { match: /\/assets\/thumbnails\/.*\.webp$/,
+    {
+      match: /\/assets\/thumbnails\/.*\.webp$/,
       async process(filename, config, tools) {
         if (fs.existsSync(filename)) {
           return [
@@ -217,7 +218,8 @@ export default {
         }
       }
     },
-    { match: /\.webp$/,
+    {
+      match: /\.webp$/,
       async process(filename, config, tools) {
         if (fs.existsSync(filename)) {
           return [
@@ -237,17 +239,19 @@ export default {
         }
       }
     },
-    { match: /^src\/assets\/images\.json$/,
+    {
+      match: /^src\/assets\/images\.json$/,
       async process(filename, config, tools) {
         const images = []
         for await (const file of getFiles('images')) {
           if (!reImageExts.test(file)) continue;
           images.push(path.join(path.relative('images', path.dirname(file)), path.basename(file, path.extname(file)) + '.webp').replace(/\\/g, '/'))
         }
-        return [ JSON.stringify(images), 'application/json' ]
+        return [JSON.stringify(images), 'application/json']
       }
     },
-    { match: /^src\/assets\/events\.json$/,
+    {
+      match: /^src\/assets\/events\.json$/,
       async process(filename, config, tools) {
         const events = []
         for await (const file of getFiles('events')) try {
@@ -255,7 +259,7 @@ export default {
         } catch (err) {
           console.error(err)
         }
-        return [ JSON.stringify(Object.fromEntries(events)), 'application/json' ]
+        return [JSON.stringify(Object.fromEntries(events)), 'application/json']
       }
     }
   ]
