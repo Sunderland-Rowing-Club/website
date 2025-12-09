@@ -4,7 +4,7 @@ block pageTitle
   | Learn to Row
 
 block headerImage
-  - const headerImage = 'members/learn_to_Row'
+  - const headerImage = 'members/learn_to_row'
 
 block sections
   a#sign-up-button.header-button Sign Up Now
@@ -52,10 +52,10 @@ block sections
     #sign-up-section.scroll-stop
     .section-split
       div
-        h1 How to join!
-        p If you’d like to join our club then please get in touch by filling out the Learn to Row Interest form.
-        p For any other questions don't hesitate to get in touch by clicking the button.
-        br
-        a.link-button(href='/contact') Contact Us
+        h1 How To Join
+        p To join, contact us at the email below, where we can get you started on your rowing journey or respond to any further queries.
+        div: a.email(href="mailto:sunderlandrowingclub1889@gmail.com")
+          .icon: include /../includes/icons/email.svg
+          | sunderlandrowingclub1889@gmail.com
 
-      <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSff4pFp8L0p3fIKrwRJrso_pHjtjUEUcV3BHHGOqwb1tqLD-A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+      //<iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSff4pFp8L0p3fIKrwRJrso_pHjtjUEUcV3BHHGOqwb1tqLD-A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
