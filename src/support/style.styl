@@ -1,9 +1,32 @@
 @import '/includes/global.styl'
 @import '/includes/page_sections.styl'
 
+.email
+  gap: 8px
+  margin-bottom: 20px
+  text-decoration: none
+  text-align: center
+  font-size: 16px
+  color: #fff
+  padding: 5px
+  background-color: var(--background-color)
+  border-radius: 4px
+  display: flex
+
+  &:hover
+    background-color: var(--secondary-background-color)
+  
+  .icon>svg
+    width: 24px
+    height: 24px
+    display: block
+    fill: #fff
+
 .section-attachments
   min-width: 400px
   margin-left: 30px
+  flex-direction: row !important 
+  align-self: center
   
   @media screen and (max-width: 1000px)
     max-width: @css{min(400px, calc(100vw - 100px))}
@@ -27,23 +50,19 @@
       width: 100%
       background-color: #fff
 
-  &.qr
-    min-width: 638px
-    .attachment
-      padding: 12px !important 
-    img
-      max-width: 400px
-    
+  .attachment
+    padding: 12px !important
     
 .link-button
   background-color: #fff
   color: #000
   border-radius: 4px
   padding: 12px 18px
+  font-weight: bold;
   text-decoration: none
   &:hover
     background-color: var(--secondary-background-color)
-      
+
 #crowdfunding
   gap: 10px
   padding: 20px
@@ -64,7 +83,7 @@
   
   &>a
     max-width: 600px
-    border: 4px solid #fff
+    border: 20px solid #fff
     border-radius: 4px
     box-sizing: border-box
     align-self: center
@@ -80,7 +99,6 @@
   grid-template-columns: @css{repeat(auto-fill, minmax(min(400px, 100%), 1fr))}
   justify-items: center
   
-  
   &>a
     display: block
     max-width: @css{min(400px, 100%)}
@@ -95,5 +113,7 @@
 
 #easyfundraising-info
   color: white
-  font-weight: bold
-  text-align: center
+  font-weight: normal
+  text-align: left
+  margin-bottom: 20px
+  font-size: 1.25em
