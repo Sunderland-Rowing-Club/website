@@ -9,6 +9,7 @@ html
           image = `https://${self.domain}/assets/icon.png`,
           themeColor = '#38b6ff',
           css = '/style.css'
+    
     block head
     title= title
     meta(name='og:type', content='website')
@@ -24,6 +25,7 @@ html
     link(rel='icon' type='image/png' sizes='16x16' href='/assets/favicon-16x16.png')
     link(rel='stylesheet', type='text/css', href=css)
     script(type='module', src='/menu.js')
+  
   body
     #nav-bar
       a#home-button.nav-button(href='/')
@@ -31,6 +33,7 @@ html
         div
           div Sunderland
           div Rowing Club
+      
       .filler
       //- a.nav-button.wide-screen(href='/about') About
       .nav-drop-down.wide-screen Join Us
@@ -41,6 +44,7 @@ html
           a.nav-drop-down-option(href='/members/adults') Adults
           a.nav-drop-down-option(href='/members/flexi') Flexi-members
           //- a.nav-drop-down-option(href='/members/recreational') Recreational
+      
       a.nav-button.wide-screen(href='/weather') Weather &amp; Conditions
       a.nav-button.wide-screen(href='/events') Events
       a.nav-button.wide-screen(href='/support') Support Us
@@ -49,38 +53,44 @@ html
       #nav-bar-hamburger-button
         .menu-icon: include /../includes/icons/menu.svg
         .close-icon: include /../includes/icons/close.svg
+    
     #nav-list(style='display:none;')
       //- a.nav-list-button(href='/about') About
-      
       .nav-list-section(data-title='Join Us')
         a.nav-list-button(href='/members/learn') Learn-to-row
         a.nav-list-button(href='/members/juniors') Juniors
         a.nav-list-button(href='/members/adults') Adults
         a.nav-list-button(href='/members/flexi') Flexi-members
         //- a.nav-list-button(href='/members/recreational') Recreational
+      
       a.nav-list-button(href='/weather') Weather &amp; Conditions
       a.nav-list-button(href='/events') Events
       a.nav-list-button(href='/support') Support Us
       //- a.nav-list-button(href='/merch') Merch
       a.nav-list-button(href='/contact') Contact
+    
     #content
       block content
+    
     #footer
       #footer-website
         a#footer-britishrowing(href='https://www.britishrowing.org/'): img(src='/assets/british_rowing.webp')
         div Sunderland Rowing Club
         sub Website by Even Aasgaard Torset &amp; Martin Murphy
+      
       #footer-contact
         a.row(href='mailto:sunderlandrowingclub1889@gmail.com')
           #footer-email
             .footer-details
               .footer-icon: include /../includes/icons/email.svg
               | sunderlandrowingclub1889@gmail.com
+        
         a.row(href='tel:07546363662')
           #footer-tel
             .footer-details
               .footer-icon: include /../includes/icons/phone.svg
               | 07546 363662
+        
         a.row.location-row(href='https://goo.gl/maps/uGbUXG5Tvhcs3YoD9')
           #footer-address
             .footer-details
@@ -89,6 +99,7 @@ html
                 div Sunderland Rowing Club
                 div Riverside Park, South Hylton
                 div SR4 0RT
+      
       #footer-social
         a.footer-social-link(title='Youtube', href='https://www.youtube.com/@sunderlandrowingclub'): include /../includes/icons/youtube.svg
         a.footer-social-link(title='Instagram', href='https://www.instagram.com/sunderland_rowing_club/'): include /../includes/icons/instagram.svg
