@@ -5,22 +5,51 @@
   gap: 8px
   margin-bottom: 20px
   text-decoration: none
-  text-align: center
-  font-size: 16px
+  font-size: .75em
   color: #fff
   padding: 5px
   background-color: var(--background-color)
   border-radius: 4px
   display: flex
+  align-items: center
 
   &:hover
     background-color: var(--secondary-background-color)
   
+  @media screen and (max-width: 1000px)
+    
+    .icon>svg
+      width: 1px
+      height: 1px
+      display: block
+      fill: #fff
+
   .icon>svg
     width: 24px
     height: 24px
     display: block
     fill: #fff
+
+.section-content
+  display: flex
+  flex-direction: column
+  flex: 1
+  min-width: 300px
+
+  &>p
+    margin-bottom: 0
+
+  &>a
+    max-width: 600px
+    border: 20px solid #fff
+    border-radius: 4px
+    box-sizing: border-box
+    align-self: center
+    margin-top: 16px
+
+    &>img
+      width: 100%
+      display: block
 
 .section-attachments
   min-width: 400px
@@ -47,7 +76,6 @@
 
     &>img
       display: block
-      width: 100%
       background-color: #fff
 
   .attachment
@@ -115,5 +143,6 @@
   color: white
   font-weight: normal
   text-align: left
-  margin-bottom: 20px
+  margin-bottom: 0px
+  margin-top: 16px
   font-size: 1.25em
